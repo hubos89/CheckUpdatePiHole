@@ -1,4 +1,5 @@
 import requests
+import paramiko
 #get une web page
 site=requests.get("http://pi-hole.local/admin/")
 #if no connection error
@@ -10,6 +11,12 @@ if(site.status_code==200) :
     #if update available write it
     if(result != -1) :
         print("Update available!")
+        print("install now ?")
+        keyboard=input()
+        if(keyboard=='y' or keyboard=='o' or keyboard == 'yes' or keyboard == 'oui') :
+            print("update in progress ...")
+            client = paramiko.SSHClient()
+            client.connect('pi-hole.local', username='test', password='test')
 #if they are an error
 else :
     print("site not reachable")
