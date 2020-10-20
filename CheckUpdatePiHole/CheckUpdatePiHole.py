@@ -15,9 +15,9 @@ if(site.status_code==200) :
         keyboard=input()
         if(keyboard=='y' or keyboard=='o' or keyboard == 'yes' or keyboard == 'oui') :
             #open ssh connection with powershell
-            subprocess.call([r'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe','ssh pi@pi-hole.local'])
+            print(">>> pihole -up <<<")
+            process=subprocess.run([r'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe','ssh pi@pi-hole.local'])
 #if they are an error
 else :
     print("site not reachable")
-print("press enter to quit")
-input()
+    input()
