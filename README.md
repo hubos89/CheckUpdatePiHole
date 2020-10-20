@@ -1,2 +1,2 @@
 # CheckUpdatePiHole
-Check dPiHile update without going on the web interface
+Check PiHole update without going on the web interface
