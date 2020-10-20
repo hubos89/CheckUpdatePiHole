@@ -1,6 +1,4 @@
 import requests
-import os
-import xml.etree.ElementTree as ElementTree
 #get une web page
 site=requests.get("http://pi-hole.local/admin/")
 #if no connection error
